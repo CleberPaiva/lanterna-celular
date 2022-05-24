@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, Image, TouchableOpacity, Alert} from 'react-native';
+import {View, StyleSheet, Text, Image, TouchableOpacity, Alert} from 'react-native';
 import Torch from 'react-native-torch';
 import RNShake from 'react-native-shake';
 
@@ -42,7 +42,8 @@ const App = () => {
               : require('./assets/icons/logo-dio-white.png')
             } 
           />  
-      </TouchableOpacity>  
+      </TouchableOpacity> 
+      <Text style={toggle ? style.textOn : style.textOff}>By Paiva</Text> 
     </View>
   );
 };
@@ -80,5 +81,14 @@ const style = StyleSheet.create({
     alignSelf: 'center',
     width: 250,
     height: 250,
+  },
+  textOn: {
+    fontSize: 18,
+    marginTop:60,
+  },
+  textOff: {
+    fontSize: 18,
+    marginTop:60,
+    color: 'white',
   },
 });
